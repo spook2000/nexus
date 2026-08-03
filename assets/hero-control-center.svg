@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101128"/><stop offset="1" stop-color="#050610"/></linearGradient>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect x="35" y="35" width="930" height="690" rx="42" fill="url(#bg)" stroke="#7c3aed" stroke-opacity=".35"/>
+<g opacity=".13" stroke="#67e8f9"><path d="M35 145h930M35 255h930M35 365h930M35 475h930M35 585h930"/><path d="M180 35v690M325 35v690M470 35v690M615 35v690M760 35v690"/></g>
+<circle cx="735" cy="250" r="175" fill="#7c3aed" opacity=".13" filter="url(#glow)"/>
+<rect x="90" y="95" width="520" height="420" rx="24" fill="#080917" stroke="#67e8f9" stroke-opacity=".33"/>
+<rect x="90" y="95" width="520" height="58" rx="24" fill="#11132b"/><circle cx="125" cy="124" r="7" fill="#fb7185"/><circle cx="150" cy="124" r="7" fill="#fbbf24"/><circle cx="175" cy="124" r="7" fill="#4ade80"/>
+<text x="215" y="132" font-family="monospace" font-size="18" fill="#a5b4fc">nexus.control-center</text>
+<g font-family="monospace" font-size="18"><text x="128" y="205" fill="#67e8f9">&gt; /setup diagnose</text><text x="128" y="248" fill="#a7f3d0">✓ Bot permissions ready</text><text x="128" y="291" fill="#a7f3d0">✓ Multi-server storage ready</text><text x="128" y="334" fill="#a7f3d0">✓ Ticket system ready</text><text x="128" y="377" fill="#a7f3d0">✓ Minecraft status ready</text><text x="128" y="420" fill="#c4b5fd">83 commands • 136 actions</text></g>
+<rect x="128" y="457" width="430" height="8" rx="4" fill="#242642"/><rect x="128" y="457" width="430" height="8" rx="4" fill="url(#g)" filter="url(#glow)"/>
+<g transform="translate(640 180)"><rect width="250" height="325" rx="28" fill="#0a0b18" stroke="#8b5cf6" stroke-opacity=".48"/><circle cx="125" cy="82" r="46" fill="url(#g)" opacity=".25"/><path d="M98 113V55l14-9 39 46V56l14-9v67l-15 9-38-46v27z" fill="url(#g)"/><text x="125" y="160" text-anchor="middle" font-family="sans-serif" font-size="29" font-weight="800" fill="#fff">NEXUS</text><text x="125" y="190" text-anchor="middle" font-family="monospace" font-size="13" fill="#a5b4fc">MULTI-SERVER 2.0.1</text><rect x="35" y="220" width="180" height="40" rx="12" fill="#7c3aed" opacity=".7"/><text x="125" y="246" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff">QUICKSTART READY</text><circle cx="54" cy="290" r="6" fill="#4ade80"/><text x="70" y="295" font-family="monospace" font-size="12" fill="#a7f3d0">SYSTEMS ONLINE</text></g>
+<g font-family="monospace" font-size="14" fill="#8b85a7"><text x="92" y="585">52 ROLES</text><text x="240" y="585">11 CATEGORIES</text><text x="430" y="585">55 TEXT CHANNELS</text><text x="690" y="585">20 PANELS</text></g>
+<path d="M90 625h800" stroke="#7c3aed" stroke-opacity=".35"/><text x="90" y="670" font-family="monospace" font-size="18" fill="#c4b5fd">ONE BOT. EVERY SERVER. YOUR CONFIGURATION.</text>
+</svg>

@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#070813"><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><meta name="description" content="Datenschutz und gespeicherte Daten von Nexus 2.0.1."><title>Nexus Datenschutz</title></head><body><div class="page-progress" id="pageProgress"></div><header class="site-header" id="siteHeader">
+  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Nexus Logo"><span>NEXUS</span><small>2.0.1</small></a>
+  <nav class="main-nav" id="mainNav">
+<a href="index.html">Start</a>
+<a href="index.html#features">Features</a>
+<a href="commands.html">Commands</a>
+<a href="setup.html">Einrichtung</a>
+<a href="privacy.html">Datenschutz</a></nav>
+  <div class="header-actions">
+    <button class="icon-button" id="themeToggle" type="button" aria-label="Farbstil wechseln">◐</button>
+    <button class="button button-primary invite-button" type="button">Nexus einladen</button>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen"><i></i><i></i><i></i></button>
+  </div>
+</header><main class="subpage legal-page"><section class="sub-hero"><p class="eyebrow">TRANSPARENZ // DATENSCHUTZ</p><h1>WAS NEXUS <span>SPEICHERT.</span></h1><p>Diese Seite beschreibt die lokale Datenspeicherung der mitgelieferten Nexus-Version 2.0.1.</p></section><article class="legal-content"><h2>Lokale Speicherung</h2><p>Nexus speichert serverbezogene Konfigurationen lokal in <code>data/database.json</code>. Dazu können unter anderem gehören:</p><ul><li>Discord-Server-ID und Systemzuordnungen für Kanäle und Rollen</li><li>Branding, Minecraft-IP, Port, Edition und Links</li><li>Aktivierte Module und Schutzsysteme</li><li>Tickets, Bewerbungsangaben, Warnungen, Level und Coins</li><li>Giveaway-, Event- und Teilnahme-IDs</li></ul><h2>Token und Zugangsdaten</h2><p>Der Discord-Bot-Token wird ausschließlich aus der privaten Datei <code>.env</code> gelesen. Er darf niemals in die Website, in Discord-Nachrichten oder in die öffentliche ZIP aufgenommen werden.</p><h2>Mehrere Discord-Server</h2><p>Die Einstellungen werden nach Guild-ID getrennt. Ein Serveradministrator kann über die Commands nur die Konfiguration seines eigenen Discord-Servers bearbeiten.</p><h2>Backups und Logs</h2><p>Lokale Backups und Logdateien können auf dem Gerät des Bot-Hosts entstehen. Die öffentliche Bot-ZIP enthält keine privaten Backups, Logs oder Tokens.</p><h2>Website</h2><p>Diese statische Website setzt keine Analyse-Cookies und überträgt ohne zusätzliche Erweiterungen keine Formulardaten. Einstellungen wie der Farbstil oder die Setup-Checkliste werden ausschließlich im lokalen Browser-Speicher abgelegt.</p><div class="docs-alert"><strong>Hinweis:</strong> Vor einer öffentlichen Veröffentlichung solltest du diese Angaben an deinen tatsächlichen Hosting-Betrieb anpassen.</div></article></main><footer class="site-footer">
+  <div class="footer-main">
+    <div><a class="brand footer-brand" href="index.html"><img src="assets/logo.svg" alt=""><span>NEXUS</span></a><p>Multi-Server Discord-Bot für Minecraft- und Gaming-Communities.</p></div>
+    <div><h3>Produkt</h3><a href="index.html#features">Features</a><a href="commands.html">Commands</a><a href="setup.html">Einrichtung</a></div>
+    <div><h3>Rechtliches</h3><a href="privacy.html">Datenschutz</a><a href="impressum.html">Impressum</a></div>
+    <div><h3>Kontakt</h3><button class="link-button copy-discord" type="button">Discord: Spook912</button><a data-instagram target="_blank" rel="noopener">Instagram</a><a data-tiktok target="_blank" rel="noopener">TikTok</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <b id="currentYear"></b> Nexus</span><span>Version 2.0.1 • ohne Livechat-Bridge</span></div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="back-top" id="backTop" type="button" aria-label="Nach oben">↑</button><script src="site-config.js"></script><script src="script.js"></script></body></html>

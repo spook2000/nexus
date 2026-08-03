@@ -1,0 +1,9 @@
+{
+  "name": "Nexus Discord Bot",
+  "short_name": "Nexus",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#05060d",
+  "theme_color": "#070813",
+  "icons": []
+}

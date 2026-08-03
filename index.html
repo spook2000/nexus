@@ -1,305 +1,64 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080914">
-  <meta name="description" content="Nexus – moderner All-in-One Discord Bot für Moderation, Tickets, Logging und Community.">
-  <title>Nexus — Discord Bot</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body data-theme="purple">
-  <div class="loader" id="loader">
-    <img src="assets/nexus-logo.svg" alt="">
-    <strong>NEXUS INITIALISIERT</strong>
-    <span><i></i></span>
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#070813"><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><meta name="description" content="Nexus 2.0.1 – Multi-Server Discord-Bot für Minecraft- und Gaming-Communities."><title>Nexus 2.0.1 — Discord Bot für jede Community</title></head><body>
+<div class="page-progress" id="pageProgress"></div><div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Nexus Logo"><span>NEXUS</span><small>2.0.1</small></a>
+  <nav class="main-nav" id="mainNav">
+<a href="index.html">Start</a>
+<a href="index.html#features">Features</a>
+<a href="commands.html">Commands</a>
+<a href="setup.html">Einrichtung</a>
+<a href="privacy.html">Datenschutz</a></nav>
+  <div class="header-actions">
+    <button class="icon-button" id="themeToggle" type="button" aria-label="Farbstil wechseln">◐</button>
+    <button class="button button-primary invite-button" type="button">Nexus einladen</button>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen"><i></i><i></i><i></i></button>
   </div>
-
-  <canvas id="stars" aria-hidden="true"></canvas>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="grid" aria-hidden="true"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-  <header class="header glass" id="header">
-    <a class="brand" href="#home">
-      <span class="logo-box"><img src="assets/nexus-logo.svg" alt="Nexus Logo"></span>
-      <span><b>NEXUS</b><small>DISCORD SYSTEM</small></span>
-    </a>
-
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#commands">Commands</a>
-      <a href="#setup">Setup</a>
-      <a href="#status">Status</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="icon-btn" id="themeBtn" aria-label="Theme wechseln">◐</button>
-      <a class="btn btn-primary invite-link" href="#" data-link="invite">Bot hinzufügen ↗</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <div class="mobile-menu glass" id="mobileMenu">
-    <a href="#features">Features</a>
-    <a href="#commands">Commands</a>
-    <a href="#setup">Setup</a>
-    <a href="#status">Status</a>
-    <a href="#faq">FAQ</a>
-    <a class="btn btn-primary invite-link" href="#" data-link="invite">Bot hinzufügen</a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="release-pill"><span></span> Release 2.0.1 • Multi-Server Ready</div>
+    <p class="eyebrow">DISCORD AUTOMATION // MINECRAFT COMMUNITY SUITE</p>
+    <h1>DEIN SERVER.<br><strong>DEINE REGELN.</strong><br>EIN NEXUS.</h1>
+    <p class="hero-text">Nexus richtet Discord-Server ein, schützt Communities, verwaltet Tickets und Bewerbungen und zeigt deinen Minecraft-Status – mit eigener Konfiguration für jeden Server.</p>
+    <div class="hero-actions"><button class="button button-primary invite-button" type="button">Nexus einladen <b>→</b></button><a class="button button-secondary" href="setup.html">Einrichtung ansehen</a></div>
+    <div class="trust-row"><span>✓ kostenlos nutzbar</span><span>✓ pro Server getrennt</span><span>✓ ohne Livechat-Bridge</span></div>
   </div>
-
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><i></i>NEXUS V2.0 • SYSTEM ONLINE</div>
-        <h1>Dein Discord.<span>Eine neue Dimension.</span></h1>
-        <p>Nexus vereint Moderation, Tickets, Logging, Verifizierung, Community-Tools und Automatisierung in einem leistungsstarken System.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-large invite-link" href="#" data-link="invite">Nexus hinzufügen ↗</a>
-          <a class="btn btn-ghost btn-large" href="#features">Features entdecken ↓</a>
-        </div>
-        <div class="trust">
-          <div class="avatars"><span>N</span><span>S</span><span>U</span><span>+</span></div>
-          <div><b>Bereit für deine Community</b><small>Ein Bot. Volle Kontrolle.</small></div>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal">
-        <div class="dashboard-frame">
-          <div class="window-top">
-            <div><i></i><i></i><i></i></div>
-            <span>nexus-control-center</span>
-            <b>SECURE</b>
-          </div>
-
-          <div class="dashboard">
-            <aside>
-              <img src="assets/nexus-logo.svg" alt="">
-              <button class="active">◈ Overview</button>
-              <button>◇ Moderation</button>
-              <button>▱ Tickets</button>
-              <button>⌁ Logging</button>
-              <button>✦ Automations</button>
-            </aside>
-
-            <div class="dash-main">
-              <div class="dash-head">
-                <div><small>SERVER OVERVIEW</small><h3>Umbra Community</h3></div>
-                <span><i></i> Online</span>
-              </div>
-
-              <div class="dash-stats">
-                <article><small>MITGLIEDER</small><b>12,842</b><span>+12.4%</span></article>
-                <article><small>COMMANDS</small><b>84</b><span>bereit</span></article>
-                <article><small>UPTIME</small><b>99.9%</b><span>stabil</span></article>
-              </div>
-
-              <div class="activity">
-                <div class="activity-head"><small>LIVE ACTIVITY</small><i></i></div>
-                <div class="activity-row"><span class="purple">✓</span><p><b>Ticket erstellt</b><small>#support-1842</small></p><time>jetzt</time></div>
-                <div class="activity-row"><span class="cyan">⚡</span><p><b>AutoMod ausgelöst</b><small>Spam blockiert</small></p><time>12s</time></div>
-                <div class="activity-row"><span class="green">+</span><p><b>Neues Mitglied</b><small>@spook ist beigetreten</small></p><time>28s</time></div>
-              </div>
-
-              <div class="command-box"><b>/</b><span id="typingCommand">quickstart</span><small>ENTER</small></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="float-card security-card"><span>⌾</span><p><b>Anti-Nuke</b><small>Schutz aktiv</small></p><i></i></div>
-        <div class="float-card ticket-card"><span>✦</span><p><b>Ticket System</b><small>0 offene Tickets</small></p></div>
-      </div>
-    </section>
-
-    <section class="stats">
-      <article class="reveal"><b data-count="84">0</b><span>+</span><small>COMMANDS</small></article>
-      <i></i>
-      <article class="reveal"><b data-count="99">0</b><span>.9%</span><small>UPTIME</small></article>
-      <i></i>
-      <article class="reveal"><b data-count="24">0</b><span>/7</span><small>SECURITY</small></article>
-      <i></i>
-      <article class="reveal"><b data-count="1">0</b><span> BOT</span><small>ALLES DRIN</small></article>
-    </section>
-
-    <section class="section" id="features">
-      <div class="section-head reveal">
-        <div><small>CORE MODULES</small><h2>Alles, was dein Server braucht.</h2></div>
-        <p>Modular aufgebaut, schnell eingerichtet und für moderne Discord-Communities entwickelt.</p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card large reveal tilt">
-          <span class="feature-icon">⌾</span><small class="tag">SECURITY</small>
-          <h3>Moderation & Anti-Nuke</h3>
-          <p>Ban, Kick, Timeout, Warns, AutoMod, Anti-Raid und intelligentes Logging schützen deinen Server rund um die Uhr.</p>
-          <div class="shield-wrap"><div class="ring r1"></div><div class="ring r2"></div><div class="shield">N</div><i>✓</i><i>✓</i><i>✓</i></div>
-        </article>
-
-        <article class="feature-card reveal tilt">
-          <span class="feature-icon">▱</span><small class="tag">SUPPORT</small>
-          <h3>Ticket System</h3>
-          <p>Moderne Panels, Kategorien, Transcripts und volle Team-Kontrolle.</p>
-          <div class="mini-panel"><span># support-1842</span><small>Priorität: Hoch</small><b>OPEN</b></div>
-        </article>
-
-        <article class="feature-card reveal tilt">
-          <span class="feature-icon">⌁</span><small class="tag">TRACKING</small>
-          <h3>Advanced Logging</h3>
-          <p>Nachrichten, Rollen, Voice, Moderation und Serveränderungen im Blick.</p>
-          <div class="bars"><i style="--w:88%"></i><i style="--w:64%"></i><i style="--w:76%"></i><i style="--w:47%"></i></div>
-        </article>
-
-        <article class="feature-card reveal tilt">
-          <span class="feature-icon">⚡</span><small class="tag">AUTOMATION</small>
-          <h3>Quickstart Setup</h3>
-          <p>Rollen, Kanäle, Berechtigungen und Panels in wenigen Sekunden.</p>
-          <div class="progress-list">
-            <div><span>Server-Struktur</span><b>100%</b></div><i><em style="--p:100%"></em></i>
-            <div><span>Rollen</span><b>100%</b></div><i><em style="--p:100%"></em></i>
-            <div><span>Panels</span><b>84%</b></div><i><em style="--p:84%"></em></i>
-          </div>
-        </article>
-
-        <article class="feature-card wide reveal tilt">
-          <div><span class="feature-icon">✦</span><small class="tag">COMMUNITY</small>
-            <h3>Leveling, Economy & Events</h3>
-            <p>XP, Ranglisten, Giveaways, Umfragen, Reaktionsrollen, Events und ein eigenes Economy-System.</p>
-          </div>
-          <div class="leaderboard">
-            <div><b>01</b><span>S</span><p>spook</p><small>24,820 XP</small></div>
-            <div><b>02</b><span>N</span><p>nexus.dev</p><small>19,440 XP</small></div>
-            <div><b>03</b><span>U</span><p>umbra</p><small>16,102 XP</small></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="commands">
-      <div class="section-head reveal">
-        <div><small>COMMAND CENTER</small><h2>Kontrolle mit einem Slash.</h2></div>
-        <p>Durchsuche die wichtigsten Nexus-Commands.</p>
-      </div>
-
-      <div class="command-browser glass reveal">
-        <div class="command-toolbar">
-          <label><span>⌕</span><input id="commandSearch" type="search" placeholder="Command suchen..."></label>
-          <div class="tabs">
-            <button class="active" data-category="all">Alle</button>
-            <button data-category="moderation">Moderation</button>
-            <button data-category="tickets">Tickets</button>
-            <button data-category="setup">Setup</button>
-            <button data-category="utility">Utility</button>
-          </div>
-        </div>
-
-        <div class="command-list" id="commandList">
-          <article data-category="setup" data-search="quickstart setup rollen kanäle"><code>/quickstart</code><p>Erstellt automatisch deine komplette Server-Struktur.</p><span>ADMIN</span></article>
-          <article data-category="moderation" data-search="ban user moderation"><code>/ban</code><p>Bannt ein Mitglied mit Grund und optionaler Dauer.</p><span>MOD</span></article>
-          <article data-category="moderation" data-search="warn user moderation"><code>/warn</code><p>Verwarnt ein Mitglied und speichert den Fall.</p><span>MOD</span></article>
-          <article data-category="moderation" data-search="clear purge messages"><code>/clear</code><p>Löscht eine gewählte Anzahl Nachrichten.</p><span>MOD</span></article>
-          <article data-category="tickets" data-search="ticket panel support"><code>/ticket-panel</code><p>Erstellt ein modernes Support-Panel.</p><span>ADMIN</span></article>
-          <article data-category="tickets" data-search="ticket close transcript"><code>/ticket-close</code><p>Schließt ein Ticket und erstellt ein Transcript.</p><span>TEAM</span></article>
-          <article data-category="setup" data-search="verify verification"><code>/verify-setup</code><p>Richtet die Verifizierung für neue Mitglieder ein.</p><span>ADMIN</span></article>
-          <article data-category="utility" data-search="server info stats"><code>/serverinfo</code><p>Zeigt Informationen und Statistiken des Servers.</p><span>USER</span></article>
-          <article data-category="utility" data-search="giveaway event"><code>/giveaway</code><p>Startet Giveaways mit Dauer und Gewinnern.</p><span>TEAM</span></article>
-          <article data-category="utility" data-search="help commands"><code>/help</code><p>Öffnet das interaktive Nexus-Hilfecenter.</p><span>USER</span></article>
-        </div>
-        <div class="empty" id="emptyState">Kein passender Command gefunden.</div>
-        <div class="command-footer"><span><i></i> Alle Systeme betriebsbereit</span><b>84+ Commands verfügbar</b></div>
-      </div>
-    </section>
-
-    <section class="section setup-section" id="setup">
-      <div class="setup-copy reveal">
-        <small>ZERO TO READY</small><h2>In drei Schritten startklar.</h2>
-        <p>Kein stundenlanges Einrichten. Nexus führt dich durch den Prozess und übernimmt den Rest.</p>
-        <div class="steps">
-          <article class="active"><b>01</b><div><h3>Nexus hinzufügen</h3><p>Verbinde den Bot sicher mit deinem Discord-Server.</p></div></article>
-          <article><b>02</b><div><h3>/quickstart ausführen</h3><p>Wähle dein Server-Konzept und deine Module.</p></div></article>
-          <article><b>03</b><div><h3>Server übernehmen</h3><p>Nexus erstellt Rollen, Kanäle, Panels und Rechte.</p></div></article>
-        </div>
-        <a class="btn btn-primary invite-link" href="#" data-link="invite">Jetzt einrichten ↗</a>
-      </div>
-
-      <div class="terminal glass reveal">
-        <div class="terminal-top"><div><i></i><i></i><i></i></div><span>nexus@server:~</span><b>LIVE</b></div>
-        <div class="terminal-body">
-          <p><span>spook@discord</span>:<b>~</b>$ nexus init</p>
-          <p class="muted">Initialisiere Nexus Core v2.0...</p>
-          <p class="success">✓ Bot-Verbindung hergestellt</p>
-          <p class="success">✓ Berechtigungen geprüft</p>
-          <p class="success">✓ Module geladen: 12/12</p>
-          <p class="info">→ Erstelle Server-Struktur...</p>
-          <div class="terminal-progress"><i id="terminalBar"></i></div>
-          <p id="terminalStatus">Rollen werden erstellt...</p>
-          <p><span>spook@discord</span>:<b>~</b>$ <em>▋</em></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="status">
-      <div class="status-panel glass reveal">
-        <div class="status-head">
-          <div><small>SYSTEM STATUS</small><h2>Nexus läuft.</h2></div>
-          <span><i></i> Alle Systeme betriebsbereit</span>
-        </div>
-
-        <div class="status-grid">
-          <article><div><span>Bot Core</span><b>Operational</b></div><p class="uptime-bars"></p></article>
-          <article><div><span>Discord API</span><b>Operational</b></div><p class="uptime-bars"></p></article>
-          <article><div><span>Ticket System</span><b>Operational</b></div><p class="uptime-bars"></p></article>
-          <article><div><span>Database</span><b>Operational</b></div><p class="uptime-bars"></p></article>
-        </div>
-        <div class="status-foot"><span>Letzte Prüfung: <b id="lastCheck">gerade eben</b></span><span>90-Tage-Uptime: <b>99.98%</b></span></div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="section-head reveal">
-        <div><small>FAQ</small><h2>Häufige Fragen.</h2></div>
-        <p>Alles Wichtige über Nexus auf einen Blick.</p>
-      </div>
-
-      <div class="faq-list">
-        <article class="faq reveal"><button><span>Ist Nexus kostenlos?</span><b>+</b></button><div><p>Hier kannst du später deine echten Informationen zu Preis, Premium und Verfügbarkeit eintragen.</p></div></article>
-        <article class="faq reveal"><button><span>Welche Rechte braucht der Bot?</span><b>+</b></button><div><p>Nexus benötigt abhängig von den aktivierten Modulen passende Verwaltungsrechte.</p></div></article>
-        <article class="faq reveal"><button><span>Kann ich Module deaktivieren?</span><b>+</b></button><div><p>Ja. Du kannst nur die Funktionen aktivieren, die dein Server wirklich benötigt.</p></div></article>
-        <article class="faq reveal"><button><span>Funktioniert die Seite auf dem Handy?</span><b>+</b></button><div><p>Ja. Die Website ist für PC, Tablet und Smartphone optimiert.</p></div></article>
-      </div>
-    </section>
-
-    <section class="section cta-section">
-      <div class="cta reveal">
-        <small>READY TO LAUNCH?</small>
-        <h2>Bring deinen Discord auf das nächste Level.</h2>
-        <p>Ein System. Unzählige Möglichkeiten. Powered by Nexus.</p>
-        <div>
-          <a class="btn btn-light btn-large invite-link" href="#" data-link="invite">Nexus hinzufügen ↗</a>
-          <a class="btn btn-dark btn-large support-link" href="#" data-link="support">Support öffnen</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-main">
-      <div>
-        <a class="brand" href="#home"><span class="logo-box"><img src="assets/nexus-logo.svg" alt=""></span><span><b>NEXUS</b><small>DISCORD SYSTEM</small></span></a>
-        <p>Der All-in-One Discord Bot für moderne Communities.</p>
-      </div>
-      <div class="footer-links">
-        <section><b>Produkt</b><a href="#features">Features</a><a href="#commands">Commands</a><a href="#status">Status</a></section>
-        <section><b>Community</b><a class="support-link" href="#" data-link="support">Support</a><a href="#faq">FAQ</a><a href="#" data-link="github">GitHub</a></section>
-        <section><b>Legal</b><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Nutzungsbedingungen</a></section>
-      </div>
-    </div>
-    <div class="footer-bottom"><p>© <span id="year"></span> Nexus. Designed by <b>spook</b>.</p><span><i></i>SYSTEM ONLINE</span></div>
-  </footer>
-
-  <div class="toast" id="toast"><span>✓</span><p id="toastText">Erledigt</p></div>
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="hero-visual reveal"><img src="assets/hero-control-center.svg" alt="Nexus Control Center Vorschau"></div>
+</section>
+<section class="metric-strip reveal"><div><strong>83</strong><span>Slash-Commands</span></div><div><strong>136</strong><span>Aktionen</span></div><div><strong>20</strong><span>Quickstart-Panels</span></div><div><strong>100%</strong><span>Servergetrennt</span></div></section>
+<section class="section" id="features"><div class="section-heading reveal"><p>01 // KERNSYSTEME</p><h2>ALLES, WAS DEINE <span>COMMUNITY BRAUCHT.</span></h2><p class="lead">Kein starres Einheitssetup. Jeder Server konfiguriert Branding, Minecraft, Kanäle, Rollen, Links und Module selbst.</p></div>
+<div class="feature-grid">
+<article class="feature-card reveal featured"><div class="feature-icon">⌁</div><span class="feature-label">SETUP</span><h3>Kompletter Quickstart</h3><p>Erstellt automatisch Rollen, Kategorien, Textkanäle, Voice-Kanäle und interaktive Panels für einen vollständigen Community-Server.</p><ul><li>52 Rollen</li><li>11 Kategorien</li><li>55 Textkanäle</li><li>9 Voice-Kanäle</li></ul></article>
+<article class="feature-card reveal"><div class="feature-icon">◎</div><span class="feature-label">MULTI-SERVER</span><h3>Eigene Konfiguration</h3><p>Jede Guild erhält getrennte Einstellungen. Admins können nur ihren eigenen Discord-Server bearbeiten.</p><a href="setup.html">Setup-Ablauf ansehen →</a></article>
+<article class="feature-card reveal"><div class="feature-icon">◇</div><span class="feature-label">SUPPORT</span><h3>Tickets & Transkripte</h3><p>Ticketpanel, Teamverwaltung, Übernahme, Prioritäten, Schließen und lokale Transkripte.</p><a href="commands.html?category=Core%20Systems">Commands öffnen →</a></article>
+<article class="feature-card reveal"><div class="feature-icon">▣</div><span class="feature-label">APPLICATIONS</span><h3>Bewerbungssystem</h3><p>Status, Notizen, Interviews und Entscheidungen – direkt über Discord-Panels und Staff-Kanäle.</p></article>
+<article class="feature-card reveal"><div class="feature-icon">▰</div><span class="feature-label">MINECRAFT</span><h3>Live-Status & Server-IP</h3><p>Java- oder Bedrock-IP, Port, Spielerzahl, Version und Status pro Discord-Server konfigurierbar.</p><p class="feature-note">Die frühere Livechat-Bridge ist vollständig entfernt.</p></article>
+<article class="feature-card reveal"><div class="feature-icon">⬡</div><span class="feature-label">SECURITY</span><h3>Moderation & Schutz</h3><p>AutoMod, Raid-Schutz, Anti-Nuke, Logging, Warnungen, Timeouts, Bans, Channel-Lockdown und Audit.</p></article>
+</div></section>
+<section class="section setup-preview"><div class="section-heading reveal"><p>02 // EINRICHTUNG</p><h2>VON NULL AUF <span>FERTIGEN SERVER.</span></h2></div><div class="setup-flow reveal">
+<div class="flow-step"><b>01</b><div><code>/setup assistant</code><p>Zeigt die optimale Reihenfolge.</p></div></div><i>→</i>
+<div class="flow-step"><b>02</b><div><code>/setup diagnose</code><p>Prüft Rechte und Konfiguration.</p></div></div><i>→</i>
+<div class="flow-step"><b>03</b><div><code>/config ...</code><p>Branding, Minecraft und Module.</p></div></div><i>→</i>
+<div class="flow-step"><b>04</b><div><code>/setup quickstart</code><p>Erstellt die komplette Struktur.</p></div></div>
+</div><div class="center-action reveal"><a class="button button-secondary" href="setup.html">Komplette Anleitung öffnen</a></div></section>
+<section class="section command-teaser"><div class="command-console reveal"><div class="console-head"><span><i></i> nexus.command-center</span><small>83 COMMANDS LOADED</small></div><div class="console-body"><p><b>$</b> /config brand name:Nexus farbe:#7C3AED</p><p><span>✓</span> Branding für diesen Server gespeichert.</p><p><b>$</b> /config minecraft host:play.example.net edition:java</p><p><span>✓</span> Minecraft-Server verbunden.</p><p><b>$</b> /setup diagnose</p><p><span>✓</span> Alle wichtigen Rechte und Systeme sind bereit.</p><a href="commands.html">Alle 83 Commands durchsuchen →</a></div></div></section>
+<section class="section faq-section"><div class="section-heading reveal"><p>03 // FAQ</p><h2>WICHTIGE <span>FRAGEN.</span></h2></div><div class="faq-list">
+<details class="reveal"><summary>Ist Nexus kostenlos?</summary><p>Ja. Nexus 2.0.1 ist kostenlos nutzbar. Für den Betrieb brauchst du lediglich einen Discord-Bot, Node.js und einen Rechner oder Server, auf dem der Bot läuft.</p></details>
+<details class="reveal"><summary>Können andere Discord-Server Nexus nutzen?</summary><p>Ja. Lässt du die GUILD_ID leer und registrierst globale Commands, kann derselbe laufende Bot auf mehreren Servern eingeladen werden. Jeder Server speichert seine Einstellungen getrennt.</p></details>
+<details class="reveal"><summary>Gibt es ein externes Dashboard?</summary><p>Aktuell erfolgt die komplette Einrichtung direkt in Discord über <code>/setup</code> und <code>/config</code>. Dadurch ist kein zusätzliches Web-Dashboard nötig.</p></details>
+<details class="reveal"><summary>Ist das Minecraft-Livechat-Plugin enthalten?</summary><p>Nein. Die Velocity-Livechat-Bridge, der HTTP-Port und der Command <code>/mcchat</code> wurden vollständig entfernt. Minecraft-IP und Live-Status bleiben erhalten.</p></details>
+</div></section>
+<section class="cta reveal"><div><p>READY TO CONNECT?</p><h2>BAUE DEINE COMMUNITY<br>MIT <span>NEXUS.</span></h2></div><div><button class="button button-primary invite-button" type="button">Nexus einladen</button><button class="button button-secondary copy-discord" type="button">Support: Spook912</button></div></section>
+</main><footer class="site-footer">
+  <div class="footer-main">
+    <div><a class="brand footer-brand" href="index.html"><img src="assets/logo.svg" alt=""><span>NEXUS</span></a><p>Multi-Server Discord-Bot für Minecraft- und Gaming-Communities.</p></div>
+    <div><h3>Produkt</h3><a href="index.html#features">Features</a><a href="commands.html">Commands</a><a href="setup.html">Einrichtung</a></div>
+    <div><h3>Rechtliches</h3><a href="privacy.html">Datenschutz</a><a href="impressum.html">Impressum</a></div>
+    <div><h3>Kontakt</h3><button class="link-button copy-discord" type="button">Discord: Spook912</button><a data-instagram target="_blank" rel="noopener">Instagram</a><a data-tiktok target="_blank" rel="noopener">TikTok</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <b id="currentYear"></b> Nexus</span><span>Version 2.0.1 • ohne Livechat-Bridge</span></div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="back-top" id="backTop" type="button" aria-label="Nach oben">↑</button>
+<script src="site-config.js"></script><script src="script.js"></script></body></html>
